@@ -1,23 +1,30 @@
+import java.util.Iterator;
+
 public class Waitress {
+    Menu PancakeHouseMenu;
+    Menu DinnerMenu;
+    Waitress(Menu PancakeHouseMenu, Menu DinnerMenu){
+        this.PancakeHouseMenu=PancakeHouseMenu;
+        this.DinnerMenu=DinnerMenu;
+    }
+
     public void printMenu(){
 
     }
     public void printBreakfastMenu(){
-        PancakeHouseMenu menu = new PancakeHouseMenu();
-        Iterator iterator = menu.createIterator();
+        Iterator iterator = PancakeHouseMenu.createIterator();
         while(iterator.hasNext()){
-            MenuItem item = iterator.next();
+            MenuItem item = (MenuItem) iterator.next();
             System.out.println(item.getName());
             System.out.println(item.getDescription());
             System.out.println(item.getPrice()+"\n");
         }
     }
     public void printDinnerMenu(){
-        DinerMenu menu = new DinerMenu();
-        Iterator iterator = menu.createIterator();
+        Iterator iterator = DinnerMenu.createIterator();
         while(iterator.hasNext())
         {
-            MenuItem item = iterator.next();
+            MenuItem item = (MenuItem) iterator.next();
             System.out.println(item.getName());
             System.out.println(item.getDescription());
             System.out.println(item.getPrice()+"\n");
