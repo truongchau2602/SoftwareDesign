@@ -1,2 +1,17 @@
-package PACKAGE_NAME;public class Student {
+public class Student {
+    String name;
+
+
+    Student(){};
+    public Student(String name){
+        this.name=name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

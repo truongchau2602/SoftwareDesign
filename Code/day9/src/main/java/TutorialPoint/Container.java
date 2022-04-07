@@ -1,2 +1,7 @@
-package TutorialPoint;public class Container {
+package TutorialPoint;
+
+public interface  Container {
+    public Iterator getIterator();
+
+    public Iterator getOrderedIterator();
 }

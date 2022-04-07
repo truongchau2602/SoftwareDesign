@@ -1,2 +1,6 @@
-package TutorialPoint;public class Iterator {
+package TutorialPoint;
+
+public interface Iterator {
+    public boolean hasNext();
+    public Object next();
 }

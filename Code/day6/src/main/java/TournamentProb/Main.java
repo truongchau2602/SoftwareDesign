@@ -55,12 +55,12 @@ public class Main {
 
         Tournament tour = new Tournament();
         tour.insert(finale);
-        tour.left.insert(semi1);
-        tour.right.insert(semi2);
-        tour.left.left.insert(quarter1);
-        tour.left.right.insert(quarter2);
-        tour.right.left.insert(quarter3);
-        tour.right.right.insert(quarter4);
+        tour.addLeft(semi1);
+        tour.addRight(semi2);
+        tour.left.addLeft(quarter1);
+        tour.left.addRight(quarter2);
+        tour.right.addLeft(quarter3);
+        tour.right.addRight(quarter4);
 
         tour.checkValid();
 
